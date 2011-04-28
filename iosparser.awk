@@ -1,3 +1,7 @@
+# regex filtering 
+# Usage:
+# awk -v field=AU -v reg=Good -f iosparser.awk  nanopart/savedrecs.txt
+
 # parse affiliation record 
 function parseC1() {
     ncf=split(record["C1"], ldata, "\n")
@@ -15,8 +19,10 @@ function parseC1() {
 }
 
 !NF{
-    # end of the record 
+  # end of the record 
+  if ( record[field] ~ reg ) {
     parseC1()
+  }
     delete record
     tag=""
     next
