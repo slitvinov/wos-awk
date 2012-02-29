@@ -1,3 +1,7 @@
 #! /bin/bash
 
-awk -f iosparser.awk nanopart/*.txt   | grep Russia | sort | awk -v title="Russia" -f tohtml.awk > russia.html
+output=russia.html
+awk -f iosparser.awk -v field=C1 -v reg=Switz nanopart/*.txt   | \
+    sort | awk -v title="Russia+Switz" -f tohtml.awk > ${output}
+
+printf "created: %s\n" ${output} > "/dev/stderr"

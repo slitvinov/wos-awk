@@ -1,6 +1,11 @@
-# regex filtering 
+# regex filtering
 # Usage:
 # awk -v field=AU -v reg=Good -f iosparser.awk  nanopart/savedrecs.txt
+# awk -v field=C1 -v reg=Lomonosov -f iosparser.awk  nanopart/savedrecs.txt
+# 
+# See two-character field tags
+# http://images.webofknowledge.com/WOK45/help/WOS/h_fieldtags.html
+# or tag.list
 
 # parse affiliation record 
 function parseC1() {
