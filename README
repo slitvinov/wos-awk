@@ -2,6 +2,14 @@ Create a html report from WoS text records
 Run 
 bash all-part.sh
 
+Input 
+See File Formats
+Save to Plain Text
+http://images.webofknowledge.com/WOK45/help/WOS/ht_output.html
+
+See also
+http://isi-rb.rubyforge.org
+
 2011-04-28 10:57 (CEST)
 Topic=(nanoparticl*) AND Year Published=(2009-2011) AND Address=(Russia)
 Timespan=All Years. Databases=SCI-EXPANDED, SSCI. 
